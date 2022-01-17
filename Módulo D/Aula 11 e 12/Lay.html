@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>teste</title>
+  <style>
+    input:first-letter{
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <h1>Teste do amor</h1>
+  <h3>Digite o primeiro nome do seu amado:</h3>
+  <input type="text" name="love" id="mor" placeholder="Primeira letra maiscula" > 
+  <input type="button" value="Clique para saber o resultado" onclick="acao()">
+  <h3>O Resultado é:</h3>
+  <div id="res"></div>
+
+  <script>
+    function acao(){
+
+    var love = document.getElementById("mor")
+    var res = document.getElementById("res")
+       
+    if(love.value==="Guilherme"){
+      res.innerHTML = `<h1>Parabéns</h1> <h3>O Guilherme te ama muito e está muito feliz ao seu lado!!!</h3>`
+    }else{
+      res.innerHTML = `O nome parece não estar certo, tente outro nome ou verifique se a primeira letra está maiuscula.`
+    }
+  }
+  </script>
+</body>
+</html>

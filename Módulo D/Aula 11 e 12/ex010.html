@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>xercicio multas</title>
+</head>
+<body>
+  <h1>Sistems de multas</h1>
+  velocidade do carro: <input type="number" name="tvel" id="tvel">km/h <input type="button" value="verificar" onclick="calcular()">
+  <div id="res"></div>
+
+  <h1>Nacionalidade</h1>
+    Qual é o seu país de origem?</br> <input type="text" name="pais" id ="pais">
+    <input type="button" value="B ou E" onclick="est()">
+    <div id="nac"> Nacionalidade = </div>
+  <script>
+  function calcular(){
+    var tvel = document.getElementById("tvel")
+    var res = document.getElementById("res")
+    var vel = Number(tvel.value)
+
+    if(vel>60){
+      res.innerHTML = `<p>Sua veçocidade é de ${vel}km/h <strong>MULTADO!!!</strong></p>`
+
+    }else if(vel<=60);{
+    res.innerHTML = `<p>Sua velocidade é de ${vel}km/h</p>`
+    }
+    res.innerHTML = `Dirija sempre usando cinto de segurança`
+    
+
+
+  }
+
+  function est(){
+    var pais = document.getElementById("pais")
+    var nac = document.getElementById("nac")
+    if(pais.value=="Brasil"){
+      nac.innerHTML = `Você é Brasileiro`
+    }else{
+      nac.innerHTML = `Você é estrangeiro`
+    }
+  }    
+  </script>
+</body>
+</html>
